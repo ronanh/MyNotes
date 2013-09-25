@@ -1,0 +1,12 @@
+<% if @message %>
+<h1>Hello <%= @message %>!</h1>
+<% else %>
+<h1>Hello World!</h1>
+<% end %>
+
+
+<%= form_tag("/", method: :get) do %>
+	<%= label_tag(:message, "Message: ") %>
+	<%= text_field_tag(:message, @message) %>
+	<%= submit_tag("Show") %>
+<% end %>
