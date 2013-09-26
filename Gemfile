@@ -50,3 +50,6 @@ gem 'simple_form', '~> 3.0.0'
 # Quiet assets
 gem 'quiet_assets', group: :development
 
+# kaminari
+gem 'kaminari', '0.14.1'
+gem 'kaminari-bootstrap', '0.1.3'
