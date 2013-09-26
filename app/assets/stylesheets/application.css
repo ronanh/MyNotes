@@ -8,6 +8,15 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require bootstrap
  *= require_self
  *= require_tree .
  */
+
+#wrap > .container {
+  padding: 60px 15px 0;
+}
+
+#wrap .container {
+  max-width: 730px
+}
