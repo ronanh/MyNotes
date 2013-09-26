@@ -8,8 +8,9 @@ class NoteTest < ActiveSupport::TestCase
 	end
 
 	test "search note" do
-		notes = Note.search("note1")
-		assert_equal notes.length, 2
+		notes = Note.search("CONTENT")
+		assert_equal notes.length, 3
+
 	end
 
 end
