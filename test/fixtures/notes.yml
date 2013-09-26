@@ -7,3 +7,7 @@ one:
 two:
   title: note2
   content: note2 content
+
+three:
+  title: note1
+  content: note1 bis content
