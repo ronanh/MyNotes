@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>User</th>
+      <th>Title</th>
       <th>Content</th>
       <th></th>
       <th></th>
@@ -14,7 +14,7 @@
   <tbody>
     <% @notes.each do |note| %>
       <tr>
-        <td><%= note.user %></td>
+        <td><%= note.title %></td>
         <td><%= note.content %></td>
         <td><%= link_to 'Show', note %></td>
         <td><%= link_to 'Edit', edit_note_path(note) %></td>
