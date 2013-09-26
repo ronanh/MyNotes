@@ -43,3 +43,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Simple form
+gem 'simple_form', '~> 3.0.0'
