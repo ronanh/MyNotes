@@ -46,3 +46,7 @@ end
 
 # Simple form
 gem 'simple_form', '~> 3.0.0'
+
+# Quiet assets
+gem 'quiet_assets', group: :developemnt
+
