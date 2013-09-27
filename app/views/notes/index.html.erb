@@ -14,8 +14,10 @@
       <th>Title</th>
       <th>Content</th>
       <th></th>
+      <% if user_signed_in? %>
       <th></th>
       <th></th>
+      <% end %>
     </tr>
   </thead>
 
@@ -26,5 +28,7 @@
 <%= paginate @notes %>
 
 <br>
-
+<% if user_signed_in? %>
 <%= link_to 'New Note', new_note_path, :class => "btn btn-default btn-lg" %>
+<% end %>
+

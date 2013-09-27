@@ -1,11 +1,16 @@
 
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show, :search]
 
   # GET /notes
   # GET /notes.json
   def index
-    @notes = Note.page params[:page]
+    if user_signed_in?
+      @notes = current_user.notes.page params[:page]
+    else
+      @notes = Note.page params[:page]
+    end
   end
 
   # GET /notes/search

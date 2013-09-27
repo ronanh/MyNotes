@@ -53,3 +53,7 @@ gem 'quiet_assets', group: :development
 # kaminari
 gem 'kaminari', '0.14.1'
 gem 'kaminari-bootstrap', '0.1.3'
+
+# devise
+gem 'devise', '3.1.0'
+
