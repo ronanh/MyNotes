@@ -11,5 +11,14 @@ class ApplicationController < ActionController::Base
   		devise_parameter_sanitizer.for(:sign_up) << :name
 		devise_parameter_sanitizer.for(:account_update) << :name
 	end
+
+	def authenticate_admin_user!
+		redirect_to(new_user_session_path) unless current_user.try(:admin?)
+		authenticate_user!
+	end
+
+	def current_admin_user
+		return nil unless current_user.try(:admin?)
+	end
   				
 end
