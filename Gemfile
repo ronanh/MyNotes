@@ -57,3 +57,5 @@ gem 'kaminari-bootstrap', '0.1.3'
 # devise
 gem 'devise', '3.1.0'
 
+# carrier wave
+gem 'carrierwave'

@@ -1,6 +1,12 @@
 <%= simple_form_for(@note) do |f| %>
   <%= f.input :title, label: 'Title', placeholder: 'Title' %>
   <%= f.input :content, label: 'Content' %>
+  <% if @note.image? %>
+  <%= image_tag @note.image_url %>
+  <%= f.input :remove_image, label: false, inline_label: 'Remove', as: :boolean %>
+  <% end %>
+  <%= f.input :image, label: false %>
+  <%= f.input :image_cache, as: :hidden %>
   <div class ="form-group">
     <%= f.button :submit %>
   </div>
