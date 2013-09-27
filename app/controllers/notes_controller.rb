@@ -7,6 +7,13 @@ class NotesController < ApplicationController
     @notes = Note.page params[:page]
   end
 
+  # GET /notes/search
+  def search
+    @keywords = params[:keywords]
+    @notes = Note.search(@keywords).page(params[:page])
+    render :index
+  end
+
   # GET /notes/1
   # GET /notes/1.json
   def show
@@ -59,12 +66,6 @@ class NotesController < ApplicationController
       format.html { redirect_to notes_url }
       format.json { head :no_content }
     end
-  end
-
-  def search
-    @notes = Note.search params[:keywords]
-    @keywords = params[:keywords]
-    render :index
   end
 
   private
