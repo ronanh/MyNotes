@@ -59,3 +59,7 @@ gem 'devise', '3.1.0'
 
 # carrier wave
 gem 'carrierwave'
+
+# active admin
+gem 'activeadmin', github: 'gregbell/active_admin', branch: 'master'
+
